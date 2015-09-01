@@ -28,7 +28,7 @@ describe "Picking Apples" do
 
     it 'calls on collect' do
       my_fruits = fruits
-      result = my_fruits.collect { |item| item if item == "apple" }
+      result = ["apple", "apple"]
       expect(my_fruits).to receive(:collect).and_return(result)
       expect(apple_picker_with_collect(my_fruits)).to eq(["apple", "apple"])
     end    
